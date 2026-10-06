@@ -1,0 +1,61 @@
+﻿Meaning,Code,Name
+No error,0, OK
+Unknown internal failure,1, UNKNOWN
+Device not created yet,2, NOT INITIALIZED
+Create Device called twice,3, ALREADY INITIALIZED
+Invalid parameter passed,4, INVALID ARGUMENT
+Null pointer passed to DLL,5, NULL POINTER
+Feature not implemented,6, UNSUPPORTED
+C++ exception caught,7, INTERNAL EXCEPTION
+GPU or system memory exhausted,8, OUT OF MEMORY
+Operation exceeded time limit,9, TIMEOUT
+Create Device failed,10, DEVICE CREATE FAILED
+Swap chain creation failed,11, SWAPCHAIN CREATE FAILED
+GPU reset,12, DXGI: DEVICE REMOVED
+GPU lost,13, DXGI: DEVICE RESET
+Swap chain and Present failed,14, PRESENT FAILED
+No monitor output found,15, NO OUTPUT
+No GPU adapter found,16, NO ADAPTER
+Device context invalid,17, CONTEXT LOST
+Failed to create render target view,18, BACKBUFFER FAILED
+Failed to set viewport,19, VIEWPORT FAILED
+Shader compile error,20, SHADER COMPILE FAILED
+Shader file missing,21, SHADER LOAD FAILED
+Pipeline linking failed,22, SHADER LINK FAILED
+Failed to create constant buffer,23, CONSTANT BUFFER FAILED
+Failed to create sampler state,24, SAMPLER FAILED
+Failed to create input layout,25, INPUT LAYOUT FAILED
+Failed to create offscreen RT,26, RENDER TARGET FAILED
+Failed to create depth buffer,27, DEPTH BUFFER FAILED
+Failed to create rasterizer,28, STATE OBJECT FAILED
+Invalid blur/distortion parameters,29, SHADER PARAM INVALID
+File not found or unreadable,30, TEXTURE LOAD FAILED
+Unsupported image format,31, TEXTURE FORMAT UNSUPPORTED
+GPU texture creation failed,32, TEXTURE CREATE FAILED
+Failed to update texture,33, TEXTURE UPDATE FAILED
+Invalid texture ID,34, TEXTURE NOT FOUND
+Exceeds GPU limits,35, TEXTURE TOO LARGE
+Could not map/unmap texture,36, TEXTURE LOCK FAILED
+File read error,37, TEXTURE IO ERROR
+Duplicate texture ID,38, TEXTURE ALREADY EXISTS
+Unsupported bit depth,39, TEXTURE UNSUPPORTED BPP
+Desktop duplication init failed,40, CAPTURE INIT FAILED
+No frame available,41, CAPTURE NO FRAME
+Duplication session lost,42, CAPTURE LOST
+OS blocked capture,43, CAPTURE ACCESS DENIED
+Unsupported capture format,44, CAPTURE FORMAT UNSUPPORTED
+Frame acquisition timeout,45, CAPTURE TIMEOUT
+Failed to acquire resource,46, CAPTURE RESOURCE FAILED
+Failed to map frame,47, CAPTURE MAP FAILED
+Inconsistent frame metadata,48, CAPTURE UNSTABLE
+Windows version too old,49, CAPTURE API UNAVAILABLE
+Failed to release device,50, SHUTDOWN DEVICE FAILED
+Failed to release context,51, SHUTDOWN CONTEXT FAILED
+Failed to release swap chain,52, SHUTDOWN SWAPCHAIN FAILED
+Failed to release texture,53, SHUTDOWN TEXTURE FAILED
+Failed to release shader,54, SHUTDOWN SHADER FAILED
+Failed to release state objects,55, SHUTDOWN STATE FAILED
+Failed to release capture API,56, SHUTDOWN CAPTURE FAILED
+Not all resources freed,57, SHUTDOWN INCOMPLETE
+Shutdown called twice,58, SHUTDOWN DOUBLE
+Shutdown called before init,59, SHUTDOWN INVALID
