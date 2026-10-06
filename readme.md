@@ -74,11 +74,15 @@ A fully‑functional:
 * transparent
 * click‑through
 * layered
-* DirectX‑compatible window with DPI awareness and monitor detection
+
+DirectX‑compatible window with
+
+* DPI awareness
+* monitor detection
 
 
 
-Window created with:
+Made with:
 
 * WS\_EX\_LAYERED
 * WS\_EX\_TRANSPARENT
@@ -99,7 +103,7 @@ dxv\_capture.cpp will implement:
 * AcquireNextFrame
 * Handle timeouts
 * Handle monitor changes
-* Convert DXGI\_FORMAT\_B8G8R8A8\_UNORM to shader‑usable textures
+* Conversion of DXGI\_FORMAT\_B8G8R8A8\_UNORM to shader‑usable textures
 
 This gives you a **live texture of the desktop** every frame.
 
@@ -253,19 +257,17 @@ This is the **Wallpaper Engine / f.lux / accessibility filter** architecture.
 
 To build use the build.bat file, or type the commands below into the Clang shell mentioned above.
 
-If you have the JSON config snippet for MSYS2 shells in Windows Terminal, type *win-x, i, ctrl-shift-9* to access Clang
+If you have the JSON config snippet for MSYS2 shells in Windows Terminal, type: 
 
+*win-x, i, ctrl-shift-9* 
 
+Then use the commands
 
 *cmake -B build -DCMAKE\_BUILD\_TYPE=Release*
 
 *cmake --build build --config Release*
 
-
-
-The resulting DLL will appear in:
-
-
+The resulting DLL will appear in: 
 
 *bin/CMkL.API.dll*
 
@@ -333,7 +335,7 @@ composite\_ps.hlsl — final image composition
 
 Error codes are defined in *include/dxv\_errors.h*, but they are easier and interpret to find in the error-codes.csv file.
 
-Use *DXV\_GetLastError()* (in AHK, if defined,  but that will call from this DLL, also just in C++ as-is) to retrieve the most recent error.
+Use *DXV\_GetLastError()* (in AHK, if defined, but that will call from this DLL, therefore you can also do it in C++ as-is) to retrieve the most recent error.
 
 
 
@@ -352,16 +354,12 @@ Type the install commands:
 
 
 
-***cmake --install build --prefix "C:/Program Files/DXVision"***
+*cmake --install build --prefix "C:/Program Files/DXVision"*
 
+find\_package(DXVision REQUIRED)
 
-
-***find\_package(DXVision REQUIRED)***
-
-
-
-***add\_executable(MyApp main.cpp)
-target\_link\_libraries(MyApp PRIVATE DXVision::DXVision)***
+add\_executable(MyApp main.cpp)
+target\_link\_libraries(MyApp PRIVATE DXVision::DXVision)*
 
 
 
@@ -375,13 +373,13 @@ This gives you access to include dirs, linked DLLs and .lib files, and shaders (
 
 
 
-* I need to generate 8 cpp files in style A ***(for context: different styles were covered in the chat)***, creating a full engine, but I can't go overboard with thousands of lines.
+* I need to generate 8 cpp files in style A **(for context: different styles were covered in the chat)**, creating a full engine, but I can't go overboard with thousands of lines.
 * I’ll aim for a functional skeleton, not too huge.
 * The user asked for a full engine, but I can keep it concise with basic components like a device wrapper, shader pipeline, and simplified Desktop Duplication capture.
 * I’ll stub some internals with TODOs, but still make it compile.
-* Headers will come later ***(for context: they are now ready)*** so I’ll define free functions and static structs for now.
+* Headers will come later **(for context: they are now ready)** so I’ll define free functions and static structs for now.
 * I’ll keep it under 400-500 lines.
-* I’ll assume classes ***(dev notes: I hope this worked, re. the much-newer llwiz-cum-DXV chat)*** like DXV\_Device and DXV\_Pipeline exist, even though headers ***(now ready)*** aren’t written yet.
+* I’ll assume classes **(dev notes: I hope this worked, re. the much-newer llwiz-cum-DXV chat)** like DXV\_Device and DXV\_Pipeline exist, even though headers **(now ready)** aren’t written yet.
 * The cpp files can define methods for these classes, even if they’re conceptual for now.
 * I’ll keep each file focused on key functions, without full error handling.
 * For example,
@@ -445,7 +443,7 @@ The initial project plan was to use MSVC to create the following folder structur
 
 
 
-However, it was decided that the project plan should use MSYS2 (see above)
+However, it was decided that the project plan should use MSYS2 (see above) and so the project plan got adapted:
 
 
 
